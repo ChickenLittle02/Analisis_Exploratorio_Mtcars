@@ -1,0 +1,118 @@
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% Configuración del título
+
+    
+    \title{Informe de Análisis Exploratorio de \texttt{mtcars}}
+    \author{
+      Melani Forsythe Matos \\
+      Daniela Guerrero Álvarez \\
+      Rubén Martínez Rojas
+    }
+    \date{} % Sin fecha para que no aparezca
+    
+\begin{document}
+
+\maketitle
+
+\newpage % Inserta una nueva página aquí
+
+El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene datos sobre automóviles, y tiene 32 observaciones (filas) de 11 variables (columnas). A continuación, describo cada una de las variables, su significado, el tipo de escala, y si son discretas o continuas:
+
+\begin{enumerate}
+    \item \textbf{mpg (Miles per Gallon)}
+
+          \begin{itemize}
+              \item \textbf{Descripción:} Consumo de combustible del automóvil en millas por galón.
+              \item \textbf{Escala:} Cuantitativa Continua.
+              \item \textbf{Significado:} Representa la eficiencia del combustible del automóvil, es decir, cuántas millas puede recorrer el automóvil por cada galón de gasolina.
+          \end{itemize}
+
+    \item \textbf{cyl (Cylinders)}
+
+          \begin{itemize}
+              \item \textbf{Descripción:} Número de cilindros en el motor del automóvil.
+              \item \textbf{Escala:} Cuantitativa Discreta.
+              \item \textbf{Significado:} Indica cuántos cilindros tiene el motor. Generalmente, los valores comunes son 4, 6 u 8 cilindros.
+          \end{itemize}
+
+    \item \textbf{disp (Displacement)}
+
+          \begin{itemize}
+              \item \textbf{Descripción:} Desplazamiento del motor en pulgadas cúbicas.
+              \item \textbf{Escala:} Cuantitativa Continua.
+              \item \textbf{Significado:} Es el volumen total desplazado por todos los pistones dentro del motor en una sola revolución. Es una medida del tamaño del motor.
+          \end{itemize}
+
+    \item \textbf{hp (Horsepower)}
+
+          \begin{itemize}
+              \item \textbf{Descripción:} Potencia del motor en caballos de fuerza.
+              \item \textbf{Escala:} Es una variable Cuantitativa que puede tener valores Continuos, pero en este caso solo guarda valores Discretos, por tanto la trataremos como Cuantitativa Discreta.
+              \item \textbf{Significado:} Mide la potencia del motor, es decir, la capacidad del motor para realizar trabajo en una unidad de tiempo.
+          \end{itemize}
+
+    \item \textbf{drat (Rear Axle Ratio)}
+
+          \begin{itemize}
+              \item \textbf{Descripción:} Relación de transmisión del eje trasero.
+              \item \textbf{Escala:} Cuantitativa Continua.
+              \item \textbf{Significado:} Es la relación entre las revoluciones del eje de transmisión y las revoluciones del eje trasero. Afecta el rendimiento y la velocidad del vehículo.
+          \end{itemize}
+
+    \item \textbf{wt (Weight)}
+
+          \begin{itemize}
+              \item \textbf{Descripción:} Peso del automóvil en miles de libras.
+              \item \textbf{Escala:} Cuantitativa Continua.
+              \item \textbf{Significado:} El peso del automóvil influye en su eficiencia, aceleración y manejo.
+          \end{itemize}
+
+    \item \textbf{qsec (1/4 Mile Time)}
+
+          \begin{itemize}
+              \item \textbf{Descripción:} Tiempo en segundos para recorrer un cuarto de milla.
+              \item \textbf{Escala:} Cuantitativa Continua.
+              \item \textbf{Significado:} Es una medida del tiempo que tarda el automóvil en recorrer un cuarto de milla, comúnmente usado para medir el rendimiento en aceleración.
+          \end{itemize}
+
+    \item \textbf{vs (Engine Shape)}
+
+          \begin{itemize}
+              \item \textbf{Descripción:} Forma del motor (0 = motor en V, 1 = motor en línea).
+              \item \textbf{Escala:}  Esta es de cierta manera una variable cualitativa nominal, lo que esta convertida a CUantitativa Discreta (Binaria).
+              \item \textbf{Significado:} Indica el tipo de configuración del motor: si los cilindros están dispuestos en forma de V o en línea.
+          \end{itemize}
+
+    \item \textbf{am (Transmission)}
+
+          \begin{itemize}
+              \item \textbf{Descripción:} Tipo de transmisión (0 = automática, 1 = manual).
+              \item \textbf{Escala:} Esta es de cierta manera una variable cualitativa nominal, lo que esta convertida a CUantitativa Discreta (Binaria).
+              \item \textbf{Significado:} Indica si el automóvil tiene una transmisión automática o manual.
+          \end{itemize}
+
+    \item \textbf{gear (Gears)}
+
+          \begin{itemize}
+              \item \textbf{Descripción:} Número de velocidades de la caja de cambios.
+              \item \textbf{Escala:} Cuantitativa Discreta.
+              \item \textbf{Significado:} Indica cuántas marchas tiene la caja de cambios del automóvil.
+          \end{itemize}
+
+    \item \textbf{carb (Carburetors)}
+
+          \begin{itemize}
+              \item \textbf{Descripción:} Número de carburadores.
+              \item \textbf{Escala:}Cuantitativa Discreta.
+              \item \textbf{Significado:} Indica cuántos carburadores tiene el automóvil, lo que afecta la mezcla de aire y combustible y, por ende, el rendimiento del motor.
+          \end{itemize}
+
+\end{enumerate}
+
+\end{document}

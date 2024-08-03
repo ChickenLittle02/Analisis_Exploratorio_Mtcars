@@ -1,0 +1,45 @@
+
+data(mtcars)
+# Obtener las dimensiones de la data frame
+dim(mtcars)
+
+# Calcular la media de cada variable
+sapply(mtcars, mean)
+
+# Calcular la mediana de cada variable
+sapply(mtcars, median)
+
+# Calcular el valor mínimo de cada variable
+sapply(mtcars, min)
+
+# Calcular el valor máximo de cada variable
+sapply(mtcars, max)
+
+#calcular la varianza de cada variable 
+variance <- sapply(mtcars, var)
+
+#calcular la covarianza de cada variable 
+covariance <- cov(mtcars)
+
+# Calcular la moda
+mode <- function(x) {
+  freq_table <- table(x)
+  mode_value <- names(freq_table)[which.max(freq_table)]
+  return(as.numeric(mode_value))
+}
+
+# Ejemplo de uso
+x <- mtcars$mpg
+mode(x)
+
+# Crear un gráfico de barras para visualizar la moda
+barplot(table(mtcars$mpg), main = "Moda de la variable mpg", xlab = "Valores de mpg", ylab = "Frecuencia")
+hist(mtcars$mpg, main = "Distribución de millas por galón", xlab = "Millas por galón", ylab = "Frecuencia")
+hist(mtcars$cyl, main = "Distribución de número de cilindros", xlab = "Número de cilindros", ylab = "Frecuencia")
+plot(mtcars$mpg, mtcars$cyl, main = "Relación entre millas por galón y número de cilindros", xlab = "Millas por galón", ylab = "Número de cilindros")
+boxplot(mtcars$mpg ~ mtcars$am, main = "Relación entre millas por galón y tipo de transmisión", xlab = "Tipo de transmisión", ylab = "Millas por galón")
+boxplot(mtcars$mpg ~ mtcars$am + mtcars$cyl, main = "Relación entre millas por galón y tipo de transmisión y número de cilindros", xlab = "Tipo de transmisión y número de cilindros", ylab = "Millas por galón")
+# Gráfico de la varianza
+barplot(variance, main = "Varianza de cada variable", xlab = "Variables", ylab = "Varianza")
+# Gráfico de la covarianza
+heatmap(covariance, main = "Covarianza entre las variables", xlab = "Variables", ylab = "Variables")
