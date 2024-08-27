@@ -8,7 +8,7 @@
 \usepackage{booktabs}
 \usepackage{caption}   % Paquete para personalizar leyendas de figuras
 \usepackage{float}     % Paquete para la opción `H` en figuras
-
+\usepackage{subcaption} % Añadir al preámbulo
 % Configuración del título
 
     
@@ -38,107 +38,16 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
               \item \textbf{Significado:} Representa la eficiencia del combustible del automóvil, es decir, cuántas millas puede recorrer el automóvil por cada galón de gasolina.
           \end{itemize}
 
-    \item \textbf{cyl (Cylinders)}
-
-          \begin{itemize}
-              \item \textbf{Descripción:} Número de cilindros en el motor del automóvil.
-              \item \textbf{Escala:} Cuantitativa Discreta.
-              \item \textbf{Significado:} Indica cuántos cilindros tiene el motor. Generalmente, los valores comunes son 4, 6 u 8 cilindros.
-          \end{itemize}
-
-    \item \textbf{disp (Displacement)}
-
-          \begin{itemize}
-              \item \textbf{Descripción:} Desplazamiento del motor en pulgadas cúbicas.
-              \item \textbf{Escala:} Cuantitativa Continua.
-              \item \textbf{Significado:} Es el volumen total desplazado por todos los pistones dentro del motor en una sola revolución. Es una medida del tamaño del motor.
-          \end{itemize}
-
-    \item \textbf{hp (Horsepower)}
-
-          \begin{itemize}
-              \item \textbf{Descripción:} Potencia del motor en caballos de fuerza.
-              \item \textbf{Escala:} Es una variable Cuantitativa que puede tener valores Continuos, pero en este caso solo guarda valores Discretos, por tanto la trataremos como Cuantitativa Discreta.
-              \item \textbf{Significado:} Mide la potencia del motor, es decir, la capacidad del motor para realizar trabajo en una unidad de tiempo.
-          \end{itemize}
-
-    \item \textbf{drat (Rear Axle Ratio)}
-
-          \begin{itemize}
-              \item \textbf{Descripción:} Relación de transmisión del eje trasero.
-              \item \textbf{Escala:} Cuantitativa Continua.
-              \item \textbf{Significado:} Es la relación entre las revoluciones del eje de transmisión y las revoluciones del eje trasero. Afecta el rendimiento y la velocidad del vehículo.
-          \end{itemize}
-
-    \item \textbf{wt (Weight)}
-
-          \begin{itemize}
-              \item \textbf{Descripción:} Peso del automóvil en miles de libras.
-              \item \textbf{Escala:} Cuantitativa Continua.
-              \item \textbf{Significado:} El peso del automóvil influye en su eficiencia, aceleración y manejo.
-          \end{itemize}
-
-    \item \textbf{qsec (1/4 Mile Time)}
-
-          \begin{itemize}
-              \item \textbf{Descripción:} Tiempo en segundos para recorrer un cuarto de milla.
-              \item \textbf{Escala:} Cuantitativa Continua.
-              \item \textbf{Significado:} Es una medida del tiempo que tarda el automóvil en recorrer un cuarto de milla, comúnmente usado para medir el rendimiento en aceleración.
-          \end{itemize}
-
-    \item \textbf{vs (Engine Shape)}
-
-          \begin{itemize}
-              \item \textbf{Descripción:} Forma del motor (0 = motor en V, 1 = motor en línea).
-              \item \textbf{Escala:}  Esta es de cierta manera una variable cualitativa nominal, lo que esta convertida a CUantitativa Discreta (Binaria).
-              \item \textbf{Significado:} Indica el tipo de configuración del motor: si los cilindros están dispuestos en forma de V o en línea.
-          \end{itemize}
-
-    \item \textbf{am (Transmission)}
-
-          \begin{itemize}
-              \item \textbf{Descripción:} Tipo de transmisión (0 = automática, 1 = manual).
-              \item \textbf{Escala:} Esta es de cierta manera una variable cualitativa nominal, lo que esta convertida a CUantitativa Discreta (Binaria).
-              \item \textbf{Significado:} Indica si el automóvil tiene una transmisión automática o manual.
-          \end{itemize}
-
-    \item \textbf{gear (Gears)}
-
-          \begin{itemize}
-              \item \textbf{Descripción:} Número de velocidades de la caja de cambios.
-              \item \textbf{Escala:} Cuantitativa Discreta.
-              \item \textbf{Significado:} Indica cuántas marchas tiene la caja de cambios del automóvil.
-          \end{itemize}
-
-    \item \textbf{carb (Carburetors)}
-
-          \begin{itemize}
-              \item \textbf{Descripción:} Número de carburadores.
-              \item \textbf{Escala:}Cuantitativa Discreta.
-              \item \textbf{Significado:} Indica cuántos carburadores tiene el automóvil, lo que afecta la mezcla de aire y combustible y, por ende, el rendimiento del motor.
-          \end{itemize}
-
-\end{enumerate}
-
-\begin{enumerate}
-    \item \textbf{mpg (Miles per Gallon)}
-
-          \begin{itemize}
-              \item \textbf{Descripción:} Consumo de combustible del automóvil en millas por galón.
-              \item \textbf{Escala:} Cuantitativa Continua.
-              \item \textbf{Significado:} Representa la eficiencia del combustible del automóvil, es decir, cuántas millas puede recorrer el automóvil por cada galón de gasolina.
-          \end{itemize}
-          
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/mpg_central.png}
+              \includegraphics[width=0.8\textwidth]{MTC/mpg_central.png}
               \caption{Medidas de tendencia central para la variable \texttt{mpg}.}
               \label{fig:mpg_central}
           \end{figure}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/mpg_dispersion.png}
+              \includegraphics[width=0.8\textwidth]{MTC/mpg_dispersion.png}
               \caption{Medidas de dispersión para la variable \texttt{mpg}.}
               \label{fig:mpg_dispersion}
           \end{figure}
@@ -150,17 +59,17 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
               \item \textbf{Escala:} Cuantitativa Discreta.
               \item \textbf{Significado:} Indica cuántos cilindros tiene el motor. Generalmente, los valores comunes son 4, 6 u 8 cilindros.
           \end{itemize}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/cyl_central.png}
+              \includegraphics[width=0.8\textwidth]{MTC/cyl_central.png}
               \caption{Medidas de tendencia central para la variable \texttt{cyl}.}
               \label{fig:cyl_central}
           \end{figure}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/cyl_dispersion.png}
+              \includegraphics[width=0.8\textwidth]{MTC/cyl_dispersion.png}
               \caption{Medidas de dispersión para la variable \texttt{cyl}.}
               \label{fig:cyl_dispersion}
           \end{figure}
@@ -172,17 +81,17 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
               \item \textbf{Escala:} Cuantitativa Continua.
               \item \textbf{Significado:} Es el volumen total desplazado por todos los pistones dentro del motor en una sola revolución. Es una medida del tamaño del motor.
           \end{itemize}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/disp_central.png}
+              \includegraphics[width=0.8\textwidth]{MTC/disp_central.png}
               \caption{Medidas de tendencia central para la variable \texttt{disp}.}
               \label{fig:disp_central}
           \end{figure}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/disp_dispersion.png}
+              \includegraphics[width=0.8\textwidth]{MTC/disp_dispersion.png}
               \caption{Medidas de dispersión para la variable \texttt{disp}.}
               \label{fig:disp_dispersion}
           \end{figure}
@@ -191,20 +100,20 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
 
           \begin{itemize}
               \item \textbf{Descripción:} Potencia del motor en caballos de fuerza.
-              \item \textbf{Escala:} Cuantitativa Discreta.
+              \item \textbf{Escala:} Es una variable Cuantitativa que puede tener valores Continuos, pero en este caso solo guarda valores Discretos, por tanto la trataremos como Cuantitativa Discreta.
               \item \textbf{Significado:} Mide la potencia del motor, es decir, la capacidad del motor para realizar trabajo en una unidad de tiempo.
           \end{itemize}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/hp_central.png}
+              \includegraphics[width=0.8\textwidth]{MTC/hp_central.png}
               \caption{Medidas de tendencia central para la variable \texttt{hp}.}
               \label{fig:hp_central}
           \end{figure}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/hp_dispersion.png}
+              \includegraphics[width=0.8\textwidth]{MTC/hp_dispersion.png}
               \caption{Medidas de dispersión para la variable \texttt{hp}.}
               \label{fig:hp_dispersion}
           \end{figure}
@@ -216,17 +125,17 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
               \item \textbf{Escala:} Cuantitativa Continua.
               \item \textbf{Significado:} Es la relación entre las revoluciones del eje de transmisión y las revoluciones del eje trasero. Afecta el rendimiento y la velocidad del vehículo.
           \end{itemize}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/drat_central.png}
+              \includegraphics[width=0.8\textwidth]{MTC/drat_central.png}
               \caption{Medidas de tendencia central para la variable \texttt{drat}.}
               \label{fig:drat_central}
           \end{figure}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/drat_dispersion.png}
+              \includegraphics[width=0.8\textwidth]{MTC/drat_dispersion.png}
               \caption{Medidas de dispersión para la variable \texttt{drat}.}
               \label{fig:drat_dispersion}
           \end{figure}
@@ -238,17 +147,17 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
               \item \textbf{Escala:} Cuantitativa Continua.
               \item \textbf{Significado:} El peso del automóvil influye en su eficiencia, aceleración y manejo.
           \end{itemize}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/wt_central.png}
+              \includegraphics[width=0.8\textwidth]{MTC/wt_central.png}
               \caption{Medidas de tendencia central para la variable \texttt{wt}.}
               \label{fig:wt_central}
           \end{figure}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/wt_dispersion.png}
+              \includegraphics[width=0.8\textwidth]{MTC/wt_dispersion.png}
               \caption{Medidas de dispersión para la variable \texttt{wt}.}
               \label{fig:wt_dispersion}
           \end{figure}
@@ -260,17 +169,17 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
               \item \textbf{Escala:} Cuantitativa Continua.
               \item \textbf{Significado:} Es una medida del tiempo que tarda el automóvil en recorrer un cuarto de milla, comúnmente usado para medir el rendimiento en aceleración.
           \end{itemize}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/qsec_central.png}
+              \includegraphics[width=0.8\textwidth]{MTC/qsec_central.png}
               \caption{Medidas de tendencia central para la variable \texttt{qsec}.}
               \label{fig:qsec_central}
           \end{figure}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/qsec_dispersion.png}
+              \includegraphics[width=0.8\textwidth]{MTC/qsec_dispersion.png}
               \caption{Medidas de dispersión para la variable \texttt{qsec}.}
               \label{fig:qsec_dispersion}
           \end{figure}
@@ -279,20 +188,21 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
 
           \begin{itemize}
               \item \textbf{Descripción:} Forma del motor (0 = motor en V, 1 = motor en línea).
-              \item \textbf{Escala:} Cuantitativa Discreta (Binaria).
+              \item \textbf{Escala:}  Esta es de cierta manera una variable cualitativa nominal, lo que esta convertida a Cuantitativa Discreta (Binaria).
               \item \textbf{Significado:} Indica el tipo de configuración del motor: si los cilindros están dispuestos en forma de V o en línea.
           \end{itemize}
-          
+
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/vs_central.png}
+              \includegraphics[width=0.8\textwidth]{MTC/vs_central.png}
               \caption{Medidas de tendencia central para la variable \texttt{vs}.}
               \label{fig:vs_central}
           \end{figure}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/vs_dispersion.png}
+              \includegraphics[width=0.8\textwidth]{MTC/vs_dispersion.png}
               \caption{Medidas de dispersión para la variable \texttt{vs}.}
               \label{fig:vs_dispersion}
           \end{figure}
@@ -301,20 +211,20 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
 
           \begin{itemize}
               \item \textbf{Descripción:} Tipo de transmisión (0 = automática, 1 = manual).
-              \item \textbf{Escala:} Cuantitativa Discreta (Binaria).
+              \item \textbf{Escala:} Esta es de cierta manera una variable cualitativa nominal, lo que esta convertida a CUantitativa Discreta (Binaria).
               \item \textbf{Significado:} Indica si el automóvil tiene una transmisión automática o manual.
           \end{itemize}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/am_central.png}
+              \includegraphics[width=0.8\textwidth]{MTC/am_central.png}
               \caption{Medidas de tendencia central para la variable \texttt{am}.}
               \label{fig:am_central}
           \end{figure}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/am_dispersion.png}
+              \includegraphics[width=0.8\textwidth]{MTC/am_dispersion.png}
               \caption{Medidas de dispersión para la variable \texttt{am}.}
               \label{fig:am_dispersion}
           \end{figure}
@@ -326,17 +236,17 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
               \item \textbf{Escala:} Cuantitativa Discreta.
               \item \textbf{Significado:} Indica cuántas marchas tiene la caja de cambios del automóvil.
           \end{itemize}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/gear_central.png}
+              \includegraphics[width=0.8\textwidth]{MTC/gear_central.png}
               \caption{Medidas de tendencia central para la variable \texttt{gear}.}
               \label{fig:gear_central}
           \end{figure}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/gear_dispersion.png}
+              \includegraphics[width=0.8\textwidth]{MTC/gear_dispersion.png}
               \caption{Medidas de dispersión para la variable \texttt{gear}.}
               \label{fig:gear_dispersion}
           \end{figure}
@@ -348,17 +258,17 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
               \item \textbf{Escala:} Cuantitativa Discreta.
               \item \textbf{Significado:} Indica cuántos carburadores tiene el automóvil, lo que afecta la mezcla de aire y combustible y, por ende, el rendimiento del motor.
           \end{itemize}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/carb_central.png}
+              \includegraphics[width=0.8\textwidth]{MTC/carb_central.png}
               \caption{Medidas de tendencia central para la variable \texttt{carb}.}
               \label{fig:carb_central}
           \end{figure}
-          
+
           \begin{figure}[H]
               \centering
-              \includegraphics[width=\textwidth]{MTC/carb_dispersion.png}
+              \includegraphics[width=0.8\textwidth]{MTC/carb_dispersion.png}
               \caption{Medidas de dispersión para la variable \texttt{carb}.}
               \label{fig:carb_dispersion}
           \end{figure}
@@ -393,47 +303,45 @@ A continuación se presentan algunos de los hallazgos clave de la matriz de corr
 \section{Resumen de Hallazgos}
 \begin{itemize}
     \item \textbf{Correlaciones Fuertes}:
-    \begin{itemize}
-        \item \texttt{mpg} y \texttt{wt}: Correlación negativa fuerte (-0.87), indicando que a mayor peso del automóvil, menor es el rendimiento de combustible.
-        \item \texttt{mpg} y \texttt{cyl}: Correlación negativa fuerte (-0.85), sugiriendo que los automóviles con más cilindros tienden a tener un menor rendimiento de combustible.
-        \item \texttt{hp} y \texttt{disp}: Correlación positiva fuerte (0.91), indicando que a mayor desplazamiento del motor, mayor es la potencia en caballos de fuerza.
-    \end{itemize}
-    
-    \section*{Relación entre MPG y Peso del Vehículo}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{mpg_vs_wt.png}
-    \caption{Gráfico de dispersión de MPG vs Peso del Vehículo (\texttt{wt}) con línea de regresión.}
-    \label{fig:mpg_vs_wt}
-\end{figure}
+          \begin{itemize}
+              \item \texttt{mpg} y \texttt{wt}: Correlación negativa fuerte (-0.87), indicando que a mayor peso del automóvil, menor es el rendimiento de combustible.
+              \item \texttt{mpg} y \texttt{cyl}: Correlación negativa fuerte (-0.85), sugiriendo que los automóviles con más cilindros tienden a tener un menor rendimiento de combustible.
+              \item \texttt{hp} y \texttt{disp}: Correlación positiva fuerte (0.91), indicando que a mayor desplazamiento del motor, mayor es la potencia en caballos de fuerza.
+          \end{itemize}
+          Lo que tambien es visible en los siguientes graficos de dispersion que relacionan ambas variables
 
-\section*{Relación entre MPG y Número de Cilindros}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{mpg_vs_cyl.png}
-    \caption{Gráfico de dispersión de MPG vs Número de Cilindros (\texttt{cyl}) con línea de regresión.}
-    \label{fig:mpg_vs_cyl}
-\end{figure}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=0.5\textwidth]{mpg_vs_wt.png}
+              \label{fig:mpg_vs_wt}
+              \vspace{0.5cm} % Espacio entre las imágenes
+          \end{figure}
 
-\section*{Relación entre Potencia y Desplazamiento del Motor}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{hp_vs_disp.png}
-    \caption{Gráfico de dispersión de Potencia (\texttt{hp}) vs Desplazamiento del Motor (\texttt{disp}) con línea de regresión.}
-    \label{fig:hp_vs_disp}
-\end{figure}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=0.5\textwidth]{mpg_vs_cyl.png}
+              \label{fig:mpg_vs_cyl}
+              \vspace{0.5cm} % Espacio entre las imágenes
+          \end{figure}
+
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=0.5\textwidth]{hp_vs_disp.png}
+              \label{fig:hp_vs_disp}
+              \vspace{0.5cm} % Espacio entre las imágenes
+          \end{figure}
 
     \item \textbf{Correlaciones Moderadas}:
-    \begin{itemize}
-        \item \texttt{mpg} y \texttt{drat}: Correlación positiva moderada (0.68), sugiriendo que una mayor relación de transmisión puede estar asociada con un mejor rendimiento de combustible.
-        \item \texttt{am} y \texttt{mpg}: Correlación positiva moderada (0.60) entre el tipo de transmisión (manual) y el rendimiento de combustible.
-    \end{itemize}
-    
+          \begin{itemize}
+              \item \texttt{mpg} y \texttt{drat}: Correlación positiva moderada (0.68), sugiriendo que una mayor relación de transmisión puede estar asociada con un mejor rendimiento de combustible.
+              \item \texttt{am} y \texttt{mpg}: Correlación positiva moderada (0.60) entre el tipo de transmisión (manual) y el rendimiento de combustible.
+          \end{itemize}
+
     \item \textbf{Correlaciones Débiles}:
-    \begin{itemize}
-        \item \texttt{gear} y \texttt{mpg}: Correlación moderada (0.48), indicando que el número de marchas tiene un efecto, pero no tan fuerte como otras variables.La correlación moderada sugiere que el número de marchas puede influir en el rendimiento de combustible, pero no es el único factor. Es decir, un automóvil con más marchas podría tener un mejor rendimiento de combustible, pero hay otras variables (como el peso del automóvil, el tipo de motor, etc.) que también juegan un papel importante.
-        \item \texttt{drat} y \texttt{carb}: Correlación débil (-0.09), sugiriendo que no hay una relación significativa entre la relación de transmisión y el número de carburadores.
-    \end{itemize}
+          \begin{itemize}
+              \item \texttt{gear} y \texttt{mpg}: Correlación moderada (0.48), indicando que el número de marchas tiene un efecto, pero no tan fuerte como otras variables.La correlación moderada sugiere que el número de marchas puede influir en el rendimiento de combustible, pero no es el único factor. Es decir, un automóvil con más marchas podría tener un mejor rendimiento de combustible, pero hay otras variables (como el peso del automóvil, el tipo de motor, etc.) que también juegan un papel importante.
+              \item \texttt{drat} y \texttt{carb}: Correlación débil (-0.09), sugiriendo que no hay una relación significativa entre la relación de transmisión y el número de carburadores.
+          \end{itemize}
 \end{itemize}
 
 \section{Conclusiones}
@@ -456,10 +364,10 @@ A continuación se muestra una imagen:
 \subsection{Ejes del Gráfico}
 \begin{itemize}
     \item \textbf{Eje X (Tipo de Transmisión)}: Este eje representa el tipo de transmisión de los automóviles, donde:
-        \begin{itemize}
-            \item 0 representa transmisión automática.
-            \item 1 representa transmisión manual.
-        \end{itemize}
+          \begin{itemize}
+              \item 0 representa transmisión automática.
+              \item 1 representa transmisión manual.
+          \end{itemize}
     \item \textbf{Eje Y (Frecuencia)}: Este eje muestra la frecuencia observada de automóviles para cada combinación de tipo de transmisión y tipo de motor.
 \end{itemize}
 
@@ -467,10 +375,10 @@ A continuación se muestra una imagen:
 \begin{itemize}
     \item Cada barra representa la frecuencia de automóviles que tienen una combinación específica de tipo de transmisión y tipo de motor.
     \item Las barras están agrupadas por el tipo de transmisión (automática y manual) y se diferencian por color según el tipo de motor:
-        \begin{itemize}
-            \item 0 representa un motor en línea.
-            \item 1 representa un motor en V.
-        \end{itemize}
+          \begin{itemize}
+              \item 0 representa un motor en línea.
+              \item 1 representa un motor en V.
+          \end{itemize}
 \end{itemize}
 
 \subsection{Colores}
@@ -497,7 +405,7 @@ El gráfico permite evaluar visualmente si existe una relación entre el tipo de
     \item Permite identificar patrones, tendencias y posibles asociaciones entre las variables.
     \item Junto con los resultados de la prueba chi-cuadrado, este gráfico proporciona una comprensión más profunda de cómo se distribuyen las frecuencias de los automóviles según su tipo de transmisión y motor.
 \end{itemize}
-\begin{figure}[h] % 'h' indica que la imagen debe aparecer aquí
+\begin{figure}[H] % 'h' indica que la imagen debe aparecer aquí
     \centering % Centra la imagen
     \includegraphics[width=0.8\textwidth]{Imagen2.png}
     \caption{Grafico de Barras, Distribucion Chi-Cuadrado} % Título de la figura
