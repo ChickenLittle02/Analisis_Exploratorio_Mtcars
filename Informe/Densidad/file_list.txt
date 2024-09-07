@@ -1,0 +1,13 @@
+file_list.txt
+histograma_am.png
+histograma_carb.png
+histograma_cyl.png
+histograma_disp.png
+histograma_drat.png
+histograma_gear.png
+histograma_hp.png
+histograma_mpg.png
+histograma_qsec.png
+histograma_vs.png
+histograma_wt.png
+nombres.sh*
