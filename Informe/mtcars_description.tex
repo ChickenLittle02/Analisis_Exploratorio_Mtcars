@@ -11,7 +11,7 @@
 \usepackage{float}     % Paquete para la opción `H` en figuras
 \usepackage{subcaption} % Añadir al preámbulo
 % Configuración del título
-
+\usepackage{caption} % Para manejar etiquetas correctamente
     
     \title{Informe de Análisis Exploratorio de \texttt{mtcars}}
     \author{
@@ -64,6 +64,14 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
 		      \item \textbf{Coeficiente de Variación:} Con un 30\%, hay una variabilidad moderada en relación con la media.
 	      \end{itemize}
 
+		  \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\textwidth]{Densidad/histograma_mpg.png}
+			\caption{Histograma para mpg}
+			\label{fig:histograma_mpg}
+			\vspace{0.5cm}
+		\end{figure}
+
 	\item \textbf{cyl (Cylinders)}
 
 	      \begin{itemize}
@@ -96,6 +104,14 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
 		      \item \textbf{Rango:} El rango de 4 cilindros refleja una variabilidad moderada en la configuración del motor.
 		      \item \textbf{Coeficiente de Variación:} Con 28.86\%, indica una moderada variabilidad relativa en el número de cilindros.
 	      \end{itemize}
+
+		  \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\textwidth]{Densidad/histograma_cyl.png}
+			\caption{Histograma para cyl}
+			\label{fig:histograma_cyl}
+			\vspace{0.5cm}
+		\end{figure}
 
 	\item \textbf{disp (Displacement)}
 
@@ -130,6 +146,14 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
 		      \item \textbf{Coeficiente de Variación:} Con un 53.72\%, existe una alta variabilidad relativa en el desplazamiento.
 	      \end{itemize}
 
+		  \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\textwidth]{Densidad/histograma_disp.png}
+			\caption{Histograma para disp}
+			\label{fig:histograma_disp}
+			\vspace{0.5cm}
+		\end{figure}
+
 	\item \textbf{hp (Horsepower)}
 
 	      \begin{itemize}
@@ -162,6 +186,14 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
 		      \item \textbf{Rango:} El rango de 283 hp muestra una diferencia significativa entre los autos menos y más potentes.
 		      \item \textbf{Coeficiente de Variación:} Un 46.74\% indica una alta variabilidad relativa.
 	      \end{itemize}
+
+		  \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\textwidth]{Densidad/histograma_hp.png}
+			\caption{Histograma para hp}
+			\label{fig:histograma_hp}
+			\vspace{0.5cm}
+		\end{figure}
 
 	\item \textbf{drat (Rear Axle Ratio)}
 
@@ -196,6 +228,14 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
 		      \item \textbf{Coeficiente de Variación:} El 14.87\% sugiere baja variabilidad relativa.
 	      \end{itemize}
 
+		  \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\textwidth]{Densidad/histograma_drat.png}
+			\caption{Histograma para drat}
+			\label{fig:histograma_drat}
+			\vspace{0.5cm}
+		\end{figure}
+
 	\item \textbf{wt (Weight)}
 
 	      \begin{itemize}
@@ -228,6 +268,14 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
 		      \item \textbf{Rango:} Un rango de 3.91 refleja una diferencia considerable en el peso de los vehículos.
 		      \item \textbf{Coeficiente de Variación:} Con 30.41\%, hay una variabilidad moderada en relación a la media.
 	      \end{itemize}
+
+		  \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\textwidth]{Densidad/histograma_wt.png}
+			\caption{Histograma para wt}
+			\label{fig:histograma_wt}
+			\vspace{0.5cm}
+		\end{figure}
 
 	\item \textbf{qsec (1/4 Mile Time)}
 
@@ -263,6 +311,14 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
 		      \item \textbf{Coeficiente de Variación:} Con un 10.01\%, hay poca variabilidad relativa.
 	      \end{itemize}
 
+		  \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\textwidth]{Densidad/histograma_qsec.png}
+			\caption{Histograma para qsec}
+			\label{fig:histograma_qsec}
+			\vspace{0.5cm}
+		\end{figure}
+
 	\item \textbf{vs (Engine Shape)}
 
 	      \begin{itemize}
@@ -297,6 +353,14 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
 		      \item \textbf{Coeficiente de Variación:} Con 115.20\%, existe una alta variabilidad relativa en esta variable binaria.
 	      \end{itemize}
 
+		  \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\textwidth]{Densidad/histograma_vs.png}
+			\caption{Histograma para vs}
+			\label{fig:histograma_vs}
+			\vspace{0.5cm}
+		\end{figure}
+
 	\item \textbf{am (Transmission)}
 
 	      \begin{itemize}
@@ -329,6 +393,14 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
 		      \item \textbf{Rango:} Un rango de 1 refleja la variabilidad binaria.
 		      \item \textbf{Coeficiente de Variación:} Con 122.83\%, hay una alta variabilidad relativa.
 	      \end{itemize}
+
+		  \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\textwidth]{Densidad/histograma_am.png}
+			\caption{Histograma para am}
+			\label{fig:histograma_am}
+			\vspace{0.5cm} % Espacio entre las imágenes
+		\end{figure}
 
 	\item \textbf{gear (Gears)}
 
@@ -363,6 +435,14 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
 		      \item \textbf{Coeficiente de Variación:} Con un 20\%, la variabilidad relativa es moderada.
 	      \end{itemize}
 
+		  \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\textwidth]{Densidad/histograma_gear.png}
+			\caption{Histograma para gear}
+			\label{fig:histograma_gear}
+			\vspace{0.5cm}
+		\end{figure}
+
 	\item \textbf{carb (Carburetors)}
 
 	      \begin{itemize}
@@ -395,6 +475,15 @@ El conjunto de datos \texttt{mtcars} en R es un conjunto clásico que contiene d
 		      \item \textbf{Rango:} El rango de 7 carburadores muestra una gran diferencia en la complejidad de los motores.
 		      \item \textbf{Coeficiente de Variación:} Con 57.43\%, existe una alta variabilidad relativa.
 	      \end{itemize}
+
+		  \begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\textwidth]{Densidad/histograma_carb.png}
+			\caption{Histograma para carb}
+			\label{fig:histograma_carb}
+			\vspace{0.5cm}
+		\end{figure}
+
 \end{enumerate}
 En general, el análisis muestra que algunas variables, como \textit{mpg}, \textit{hp}, y \textit{disp}, presentan una alta dispersión y asimetría, lo que sugiere que los vehículos en el conjunto de datos tienen una gran diversidad en términos de eficiencia, potencia y tamaño del motor. Otras variables, como \textit{vs} y \textit{am}, son binarias, con poca variabilidad interna. El coeficiente de variación y la simetría son claves para entender cómo los datos están distribuidos y cómo pueden variar las características del vehículo.
 
@@ -423,6 +512,12 @@ A continuación se presentan algunos de los hallazgos clave de la matriz de corr
 	\label{tab:correlation_matrix}
 \end{table}
 
+\begin{figure}[h] % 'h' indica que la imagen debe aparecer aquí
+	\centering % Centra la imagen
+	\includegraphics[width=0.8\textwidth]{heatmap_correlation_mtcars.png}
+	\caption{Grafico de Calor , Correlaciones } % Título de la figura
+	\label{fig:mi_imagen} % Etiqueta para referencias cruzadas
+\end{figure}
 
 \section{Resumen de Hallazgos}
 \begin{itemize}
@@ -472,15 +567,6 @@ A continuación se presentan algunos de los hallazgos clave de la matriz de corr
 El análisis de la matriz de correlación del conjunto de datos \texttt{mtcars} revela varias relaciones significativas entre las variables. Las correlaciones negativas entre el peso y el rendimiento de combustible, así como entre el número de cilindros y el rendimiento de combustible, son particularmente notables. Esto sugiere que los automóviles más pesados y aquellos con más cilindros tienden a ser menos eficientes en términos de consumo de combustible. Por otro lado, las correlaciones positivas entre el desplazamiento y la potencia sugieren que los motores más grandes tienden a ser más potentes.
 
 Estos hallazgos son útiles para comprender cómo las características de los automóviles se relacionan entre sí y pueden guiar decisiones sobre el diseño y la selección de vehículos en función de su rendimiento y eficiencia.
-\section{Inserción de Imagen}
-A continuación se muestra una imagen:
-
-\begin{figure}[h] % 'h' indica que la imagen debe aparecer aquí
-	\centering % Centra la imagen
-	\includegraphics[width=0.8\textwidth]{imagen.png}
-	\caption{Grafico de Calor , Correlaciones } % Título de la figura
-	\label{fig:mi_imagen} % Etiqueta para referencias cruzadas
-\end{figure}
 \section{Analisis de la distribucion de Chi-Cuadrado}
 En el dataset \texttt{mtcars}, las variables categóricas que pueden ser analizadas con la prueba Chi-Cuadrado son:
 \begin{itemize}
@@ -556,6 +642,12 @@ En el dataset \texttt{mtcars}, las variables categóricas que pueden ser analiza
 Este análisis es útil para entender cómo las diferentes características de los automóviles en el dataset \texttt{mtcars} están asociadas entre sí. Variables como el tipo de motor (\texttt{vs}), el tipo de transmisión (\texttt{am}), y el número de cilindros (\texttt{cyl}) muestran dependencias importantes que podrían ser exploradas más a fondo en estudios adicionales.
 
 \section{Descripción del Gráfico}
+\begin{figure}[H] % 'h' indica que la imagen debe aparecer aquí
+	\centering % Centra la imagen
+	\includegraphics[width=0.8\textwidth]{mtcars_transmision_motor.png}
+	\caption{Grafico de Barras, Distribucion Chi-Cuadrado} % Título de la figura
+	\label{fig:mi_imagen} % Etiqueta para referencias cruzadas
+\end{figure}
 
 \subsection{Ejes del Gráfico}
 \begin{itemize}
@@ -594,47 +686,15 @@ Puedes identificar tendencias en la distribución de los tipos de transmisión y
 
 \subsection{Relación entre Variables}
 El gráfico permite evaluar visualmente si existe una relación entre el tipo de transmisión y el tipo de motor. Si las frecuencias son muy diferentes entre las combinaciones, esto sugiere que podría haber una asociación significativa entre estas variables. Si las frecuencias son similares, podría indicar que el tipo de transmisión no está relacionado con el tipo de motor.
-
-\section{Conclusion Distribucion Chi-Cuadrado}
 \begin{itemize}
-	\item El gráfico de barras es una herramienta poderosa para visualizar la relación entre dos variables categóricas.
-	\item Permite identificar patrones, tendencias y posibles asociaciones entre las variables.
-	\item Junto con los resultados de la prueba chi-cuadrado, este gráfico proporciona una comprensión más profunda de cómo se distribuyen las frecuencias de los automóviles según su tipo de transmisión y motor.
+    \item \textbf{Comparación entre transmisiones y motores:}
+    \begin{itemize}
+        \item \textbf{Coches automáticos:} La mayoría tiene motor en V, mientras que una minoría tiene motor recto, lo que es visible pues la barra de color naranja que representa los motores en V es mayor que la barra de color azul, que es la de los motores rectos.
+        \item \textbf{Coches manuales:} Los coches con transmisión manual están equilibrados entre motor en V y motor recto, pues como es visible ambas barras tienen tamaño similar.
+    \end{itemize}
+
+    \item \textbf{Conclusión general:} 
+    El número de coches con transmisión automática es menor que el de coches con transmisión manual. Además, se observa una preferencia por motores en V en los coches automáticos, mientras que los coches con transmisión manual muestran una distribución más equilibrada entre motores en V y rectos.
 \end{itemize}
-\begin{figure}[H] % 'h' indica que la imagen debe aparecer aquí
-	\centering % Centra la imagen
-	\includegraphics[width=0.8\textwidth]{Imagen2.png}
-	\caption{Grafico de Barras, Distribucion Chi-Cuadrado} % Título de la figura
-	\label{fig:mi_imagen} % Etiqueta para referencias cruzadas
-\end{figure}
-
-\section{Análisis del Histograma de Distribucion Normal\texttt{mpg} }
-
-\subsection{Forma de la Distribución}
-El histograma de \texttt{mpg} muestra una distribución que generalmente se asemeja a una campana, lo que sugiere que la mayoría de los automóviles tienen un rendimiento de combustible cercano a la media. La presencia de una forma de campana indica que los datos pueden aproximarse a una distribución normal, aunque es importante verificar esto con pruebas estadísticas adicionales.
-
-\subsection{Frecuencia de Valores}
-Las barras del histograma indican la frecuencia de automóviles en diferentes intervalos de \texttt{mpg}. Por ejemplo, si la barra correspondiente al intervalo de 15-20 \texttt{mpg} es más alta, esto significa que hay más automóviles en ese rango de eficiencia de combustible. Además, se puede observar cuántos automóviles tienen un \texttt{mpg} bajo (por ejemplo, menos de 15) en comparación con aquellos que tienen un \texttt{mpg} alto (por ejemplo, más de 30).
-
-\subsection{Media y Desviación Estándar}
-La media de \texttt{mpg} puede ser visualmente estimada en el histograma. Si la mayoría de las barras se agrupan alrededor de un valor central, esto indica que la media se encuentra en ese rango. Por otro lado, la desviación estándar se puede inferir observando la dispersión de las barras: un rango más estrecho de barras indica una menor variabilidad, mientras que un rango más amplio sugiere mayor variabilidad en el rendimiento de combustible.Una desviación estándar de 6.03 para datos que varían entre 10 y 33 indica una alta dispersión relativa. Esto puede ser relevante en contextos donde se espera que los datos sean más homogéneos.
-
-\subsection{Identificación de Valores Atípicos}
-El histograma puede ayudar a identificar valores atípicos (outliers). Si hay barras que se extienden significativamente más allá de la mayoría de las otras, esto podría indicar la presencia de automóviles con un rendimiento de combustible inusualmente bajo o alto. Por ejemplo, si hay un automóvil que tiene un \texttt{mpg} muy bajo (por debajo de 10), esto podría ser un valor atípico que merece más investigación.
-
-\subsection{Comparación de Rangos de \texttt{mpg}}
-Al observar el histograma, se puede comparar la frecuencia de automóviles en diferentes rangos de \texttt{mpg}. Esto ayuda a identificar qué rangos son más comunes y cuáles son menos frecuentes. Por ejemplo, si notas que hay pocos automóviles con un \texttt{mpg} superior a 30, esto sugiere que los automóviles más eficientes en combustible son menos comunes en el conjunto de datos.
-
-\subsection{Tendencias Generales}
-A través del histograma, se pueden identificar tendencias generales en el rendimiento de combustible de los automóviles en el conjunto de datos. Esto puede ser útil para entender el mercado automotriz o para realizar análisis de eficiencia energética. Si la mayoría de los automóviles tienen un \texttt{mpg} en el rango de 20-25, esto podría indicar que los vehículos en este conjunto de datos son relativamente eficientes en comparación con los estándares de consumo de combustible.
-
-\subsection{Conclusión de la Distribucion Normal}
-El análisis del histograma de \texttt{mpg} proporciona información valiosa sobre la distribución del rendimiento de combustible en el conjunto de datos \texttt{mtcars}. Permite visualizar la forma de la distribución, identificar frecuencias, evaluar la media y la variabilidad, detectar valores atípicos y comprender las tendencias generales en el rendimiento de los automóviles. Este análisis es fundamental para realizar inferencias estadísticas y tomar decisiones informadas sobre el rendimiento de combustible de los vehículos.
-\begin{figure}[h] % 'h' indica que la imagen debe aparecer aquí
-	\centering % Centra la imagen
-	\includegraphics[width=0.8\textwidth]{Image3.png}
-	\caption{Distribucion Normal} % Título de la figura
-	\label{fig:mi_imagen} % Etiqueta para referencias cruzadas
-\end{figure}
 
 \end{document}
